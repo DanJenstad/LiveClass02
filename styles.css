@@ -1,9 +1,11 @@
+/* ----- Reset ----- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ----- Page layout ----- */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +16,8 @@ body {
     padding: 20px;
 }
 
+/* ----- Cards container ----- */
+/* Horizontal row, centered, 24px gap */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +27,7 @@ body {
     align-items: flex-start;
 }
 
+/* Single pricing card: 320px wide, min 380px tall */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +39,13 @@ body {
     flex-shrink: 0;
 }
 
+/* Card header: title + price + content */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* Plan name (e.g. Hobby, Pro) */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +54,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price wrapper: amount + period inline */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -60,26 +68,31 @@ body {
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Billing period (e.g. /mo.) */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Feature list wrapper */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* "Includes:" or "Everything in X, plus:" label */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature list: no bullets, checkmark per item */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Single feature row */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +101,7 @@ body {
     color: #26251e;
 }
 
+/* Checkmark icon (✓) before each feature */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +109,7 @@ body {
     font-weight: 400;
 }
 
+/* Base: pill shape, pushes to card bottom (default = secondary/gray) */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -109,6 +124,7 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* Hover state */
 .download-button:hover {
     background-color: #D8D6CE;
 }
@@ -117,6 +133,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary variant: dark bg, white text */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,6 +147,8 @@ body {
     background-color: #333;
 }
 
+/* ----- Page label ----- */
+/* Fixed badge at top-center (version indicator) */
 .page-label {
     position: fixed;
     top: 16px;
